@@ -1,0 +1,13 @@
+<div id="container" ng-app='demos_cfg' ng-controller='search'>
+    <span id="header">CodeforGeek</span><span id="demo">Demo's</span><br />
+    <input type="search" size="40" placeholder="Search for tutorials,demos and downloads..." ng-model="search" id="search">         
+    <table id="showit">     
+        <tr><td>Post Title</td><td>Tutorial link</td><td>Demo Link</td><td>Download link</td></tr>      
+        <tr ng-repeat="data in search_data | filter:search">
+            <td>{{data.title}}</td>
+            <td><button id="article"><a href="{{data.link}}" target='_blank'>Read Article</a></button></td>         
+            <td><button id="demobutton"><a href="{{data.demo_link}}" target='_blank'>Live Demo</a></button></td>
+            <td><button id="downloadbutton"><a href="{{data.download}}" target='_blank'>Download</a></button></td>
+        </tr>
+    </table>    
+</div>  

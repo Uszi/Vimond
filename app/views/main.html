@@ -1,0 +1,7 @@
+<div ng-controller='MainCtrl'>
+  <ul class="search-data">
+    <li class="col-xs-3" ng-repeat="data in loaded_demos | filter:search">
+      <img class="col-xs-12" ng-src="{{data.imageVersions.image.url}}" />
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,61 @@
+@import 'reset.css';
+
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+  color: #ddd;
+  background-color: #111;
+}
+
+nav.navbar-default{
+  margin: 0;
+
+  background-color: #333;
+  border-color: #000;
+  color: #ddd;
+}
+div.container{
+  min-height: 400px;
+}
+div.container-full{
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 32px;
+
+  background-image: url('../images/main-bg.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+form.header-search{
+  margin: 6px 6px;
+}
+form.header-search input[type='search']{
+  height: 32px;
+  line-height: 32px;
+  border: 0;
+  background-color: #666;
+  padding: 0 6px;
+}
+ul.search-data{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  list-style: none;
+}
+ul.search-data li{
+  min-height: 140px;
+  float: left;
+}
+ul.search-data li img{
+  width: 100%;
+  max-height: 120px;
+}
+
+.set-shadow{
+  -webkit-box-shadow: 0 5px 10px 2px rgba(0,0,0,.7);
+  box-shadow: 0 5px 10px 2px rgba(0,0,0,.7);
+}
+.set-round{
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
