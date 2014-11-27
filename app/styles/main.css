@@ -93,6 +93,9 @@ ul.asset-data li input[type=text]{
   left: 0;
   z-index: 3;
 }
+#asset-loader{
+  display: none;
+}
 #asset-popup .container{
   z-index: 9;
 }
