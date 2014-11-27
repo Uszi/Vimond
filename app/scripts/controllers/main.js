@@ -25,8 +25,6 @@ angular.module('vimondApp')
 			document.querySelector('#asset-popup').style.display = 'block';
 		});
     };
-
-    console.log($scope);
     
     var load = function(){
 		$http.get('http://api.ulriken.vimondtv.com/api/web/search/categories/999/assets.json').success(function(data){
