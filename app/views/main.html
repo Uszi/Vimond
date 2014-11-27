@@ -1,7 +1,13 @@
-<div ng-controller='MainCtrl'>
-  <ul class="search-data">
-    <li class="col-xs-3" ng-repeat="data in loaded_demos | filter:search">
+<div>
+  <ul class="search-data set-round">
+    <li class="col-xs-3" ng-repeat="data in loaded_demos | filter:search" ng-click="getAsset(data['@uri'])">
       <img class="col-xs-12" ng-src="{{data.imageVersions.image.url}}" />
     </li>
   </ul>
+</div>
+<div id="asset-popup" ng-controller="MainCtrl" ng-include src="'views/asset-popup.html'">
+  
+</div>
+<div id="asset-loader">
+  <img class="set-center" src="/images/loader.gif" />
 </div>

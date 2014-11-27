@@ -14,6 +14,20 @@ angular.module('vimondApp')
       'AngularJS',
       'Karma'
     ];
+    $scope.closePopup = function(){
+    	document.querySelector('#asset-popup').style.display = 'none';
+    };
+    $scope.getAsset = function(url){
+    	document.querySelector('#asset-loader').style.display = 'block';
+    	$http.get('http://api.ulriken.vimondtv.com'+url+'.json').success(function(data){
+			$scope.asset_data = data.asset;
+			document.querySelector('#asset-loader').style.display = 'none';
+			document.querySelector('#asset-popup').style.display = 'block';
+		});
+    };
+
+    console.log($scope);
+    
     var load = function(){
 		$http.get('http://api.ulriken.vimondtv.com/api/web/search/categories/999/assets.json').success(function(data){
 			console.log(data);

@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="set-center col-xs-6 inner-wrapper set-round">
+		<div class="row">
+			<div class="col-xs-4 pull-right">{{asset_data.title}}</div>
+			<div class="col-xs-8 pull-left">
+				<img ng-src="{{asset_data.imageVersions.image.url}}" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+			 <ul class="asset-data set-round">
+			    <li class="col-xs-3" ng-repeat="(key, value) in asset_data">
+			    	<label class="col-xs-4" for="{{key}}">{{key}}</label><input class="col-xs-4 offset-xs-4" type="text" value="{{value}}" name="{{key}}" />
+			    </li>
+			  </ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="overlay" ng-click="closePopup();"></div>
